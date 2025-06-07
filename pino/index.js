@@ -13,7 +13,7 @@ class LoggerPino {
     this.#pino = pino({
       level: process.env.LOGGER_LEVEL || 'info',
       messageKey: 'log_message',
-      timestamp: () => `,"@timestamp":"${formatDateTime(new Date())}"`,
+      timestamp: () => `,"timestamp":"${formatDateTime(new Date())}"`,
       formatters: {
         level(label) {
           return { log_level: label };
@@ -52,7 +52,7 @@ class LoggerPino {
       err: {},
     });
     const logs = {
-      log_message: { message },
+      log_message: message ,
     };
     childLogger.info(logs);
   }
@@ -68,7 +68,7 @@ class LoggerPino {
       err: {},
     });
     const logs = {
-      log_message: { message },
+      log_message: message,
     };
     childLogger.debug(logs);
   }
@@ -84,7 +84,7 @@ class LoggerPino {
       err: error,
     });
     const logs = {
-      log_message: { message },
+      log_message: message,
     };
     childLogger.error(logs);
   }
