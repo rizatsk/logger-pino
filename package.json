@@ -1,0 +1,16 @@
+{
+  "name": "pino-logger-demo",
+  "version": "1.0.0",
+  "description": "Demo penggunaan Pino untuk logging di Node.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "pino": "^8.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
